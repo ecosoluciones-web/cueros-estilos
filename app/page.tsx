@@ -43,27 +43,27 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-50 w-full border-b bg-none backdrop-blur supports-[backdrop-filter]:bg-white">
-        <div className="container flex h-16 items-center justify-between">
+        <div className="container flex h-16 items-center justify-between font-montserrat">
           <nav className="hidden md:flex gap-6">
-            <Link href="#" className="text-sm font-medium">
+            <Link href="#" className="text-lg">
               Hombre
             </Link>
-            <Link href="#" className="text-sm font-medium">
+            <Link href="#" className="text-lg font-montserrat">
               Mujer
             </Link>
-            <Link href="#" className="text-sm font-medium">
+            <Link href="#" className="text-lg font-montserrat">
               Accesorios
             </Link>
           </nav>
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-xl font-bold">Cueros y Estilos</span>
+            <span className="text-3xl">CUEROS Y ESTILOS</span>
           </Link>
-          <div className="flex items-center gap-4">
-            <Button variant="ghost" size="icon">
-              <SearchIcon className="h-5 w-5" />
+          <div className="flex items-center gap-14">
+            <Button variant="ghost" size="lg">
+              <SearchIcon className="h-16 w-16" />
             </Button>
-            <Button variant="ghost" size="icon">
-              <ShoppingCart className="h-5 w-5" />
+            <Button variant="ghost" size="lg">
+              <ShoppingCart className="h-16 w-16" />
             </Button>
           </div>
         </div>
@@ -94,7 +94,7 @@ export default function Home() {
       </section>
 
       <section className="container py-12">
-        <h2 className="text-2xl font-bold mb-8">MÁS VENDIDOS</h2>
+        <h2 className="text-5xl font-medium mb-8">MÁS VENDIDOS</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {<ProductCard key={products[0].id} {...products[0]} />}
           {MoreBestSeller(products[1])}
@@ -125,7 +125,7 @@ export default function Home() {
       </section>
 
       <section className="container py-12">
-        <h2 className="text-2xl font-bold mb-8">CALZADO</h2>
+        <h2 className="text-7xl font-bold mb-8">CALZADO</h2>
 
       </section>
     </div>
