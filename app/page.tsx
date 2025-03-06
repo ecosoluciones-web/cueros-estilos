@@ -1,7 +1,6 @@
-import Image from "next/image"
-import Link from "next/link"
-import { ShoppingCart, SearchIcon } from "lucide-react"
+"use client";
 
+import Image from "next/image"
 import fondoheader from "@/assets/fondoheader.webp"
 import renzoCosta from "@/assets/marcas/renzo-costa.png"
 import cat from "@/assets/marcas/cat.png"
@@ -9,6 +8,7 @@ import cat from "@/assets/marcas/cat.png"
 import { Button } from "@/components/ui/button"
 import ProductCard from "@/components/own/product_card"
 import MoreBestSeller from "@/components/own/see_more_seller"
+import Navbar from "@/components/own/navbar";
 
 export default function Home() {
   const products = [
@@ -42,31 +42,8 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-50 w-full border-b bg-none backdrop-blur supports-[backdrop-filter]:bg-white">
-        <div className="container flex h-16 items-center justify-between font-montserrat">
-          <nav className="hidden md:flex gap-6">
-            <Link href="#" className="text-lg">
-              Hombre
-            </Link>
-            <Link href="#" className="text-lg font-montserrat">
-              Mujer
-            </Link>
-            <Link href="#" className="text-lg font-montserrat">
-              Accesorios
-            </Link>
-          </nav>
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="text-3xl">CUEROS Y ESTILOS</span>
-          </Link>
-          <div className="flex items-center gap-14">
-            <Button variant="ghost" size="lg">
-              <SearchIcon className="h-16 w-16" />
-            </Button>
-            <Button variant="ghost" size="lg">
-              <ShoppingCart className="h-16 w-16" />
-            </Button>
-          </div>
-        </div>
+      <header>
+        {Navbar()}
       </header>
       <section className="relative h-[600px] w-full">
         <Image
@@ -85,11 +62,11 @@ export default function Home() {
 
       <section className="container py-12">
         <div className="grid grid-cols-5 gap-8 items-center justify-items-center">
-          <Image src={renzoCosta} alt="renzoCosta" width={50} height={25} />
-          <Image src="/placeholder.svg?height=50&width=100" alt="Brand" width={50} height={25} />
-          <Image src={cat} alt="CAT" width={50} height={25} />
-          <Image src="/placeholder.svg?height=50&width=100" alt="Brand" width={50} height={25} />
-          <Image src="/placeholder.svg?height=50&width=100" alt="Brand" width={50} height={25} />
+          <Image src={renzoCosta} alt="renzoCosta" width={100} height={25} />
+          <Image src="/placeholder.svg?height=50&width=100" alt="Brand" width={100} height={25} />
+          <Image src={cat} alt="CAT" width={100} height={25} />
+          <Image src="/placeholder.svg?height=50&width=100" alt="Brand" width={100} height={25} />
+          <Image src="/placeholder.svg?height=50&width=100" alt="Brand" width={100} height={25} />
         </div>
       </section>
 

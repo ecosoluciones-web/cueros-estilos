@@ -12,6 +12,11 @@ const nextConfig = {
             hostname: 'th.bing.com/',
             pathname: '/th/id/**',
           },
+          {
+            protocol: 'https',
+            hostname: 'images.ctfassets.net',
+            pathname: '/**',
+          }
         ],
       }
 };

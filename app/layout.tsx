@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Afacad, Inter, Montserrat } from 'next/font/google'
+import { Afacad, Inter } from 'next/font/google'
 import "./globals.css";
 
-const montserrat = Montserrat({ 
-  subsets: ["latin"],
-  variable: '--font-montserrat',
-});
+// const montserrat = Montserrat({ 
+//   subsets: ["latin"],
+//   variable: '--font-montserrat',
+// });
 const inter = Inter({ 
   subsets: ['latin'],
   variable: '--font-inter',
@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body
         className={`${afacad.className} ${inter.className} antialiased`}
       >
